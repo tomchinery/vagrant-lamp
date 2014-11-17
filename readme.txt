@@ -13,22 +13,3 @@ machine so put your projects in there and apache should serve them up.
 PhpMyAdmin comes pre-installed so you can easily manage your databases.
 
 Just vagrant up and navigate to http://127.0.0.1:4567/ and you'll be good to go.
-
-
-file {  "/var/www/":
-
-  ensure => "link",
-
-  target => "/vagrant/www",
-
-  require => Package["apache2"],
-
-  notify => Service["apache2"],
-
-}
-
-class apache2::install {
-  package { 'apache2':
-    ensure => present,
-  }
-}
