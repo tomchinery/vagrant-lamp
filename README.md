@@ -1,3 +1,6 @@
+vagrant-lamp
+======
+
 Here is my Vagrant + Puppet LAMP setup - use how you like.
 
 Things installed on the VM:
